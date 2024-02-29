@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+		<style>
+		#image-container img {
+				width: 100%;
+				height: auto;
+		}
+		</style>
+</head>
+<body>
+		<h1>僕にしか触れないサキュバス三姉妹に搾られる話1</h1>
+		<h2>赤月みゅうと</h2>
+    <div id="image-container"></div>
+
+    <script>
+        const imageContainer = document.getElementById("image-container");
+
+        // 画像のフォルダとファイル名のプレフィックス
+        const folderPath = "赤月みゅうと/サキュバス1/";
+        const fileNamePrefix = "ファイル_";
+
+        // 画像の開始番号と終了番号
+        const startNumber = 0;
+        const endNumber = 83;
+
+        // 画像を表示するループ
+        for (let i = startNumber; i <= endNumber; i++) {
+            const img = document.createElement("img");
+            img.src = folderPath + fileNamePrefix + pad(i, 3) + ".png";
+            img.alt = "Image " + (i + 1);
+            imageContainer.appendChild(img);
+        }
+
+        // ゼロパディング関数
+        function pad(number, length) {
+            let str = String(number);
+            while (str.length < length) {
+                str = "0" + str;
+            }
+            return str;
+        }
+    </script>
+</body>
+</html>

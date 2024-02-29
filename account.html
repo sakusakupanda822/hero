@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アカウント作成</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .form-container input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>アカウント作成</h2>
+        <div>
+            <input type="text" id="username" placeholder="ユーザー名" required><br>
+            <input type="email" id="email" placeholder="メールアドレス" required><br>
+            <input type="password" id="password" placeholder="パスワード" required><br>
+            <button onclick="createAccount()">アカウント作成</button>
+        </div>
+    </div>
+
+    <script>
+        function createAccount() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // 入力がすべてされているかを確認
+            if (username !== "" && email !== "" && password !== "") {
+                // すべての入力がされている場合は、遷移先にリダイレクトする
+                window.location.href = "account.html";
+            } else {
+                // 入力が不完全な場合はアラートを表示してフォームを送信しない
+                alert("すべての項目を入力してください");
+            }
+        }
+    </script>
+</body>
+</html>
