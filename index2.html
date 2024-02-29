@@ -40,6 +40,8 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+            bottom: 0; /* 修正: フッターをページの一番下に配置 */
+            width: 100%;
         }
         footer a {
             color: #fff;
@@ -51,7 +53,7 @@
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
-            height: 100vh;
+            min-height: calc(100vh - 110px);
             background-color: #f0f0f0;
         }
         .box {
