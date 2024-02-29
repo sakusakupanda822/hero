@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK BANANA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            height: 40px;
+            width: 100px;
+            cursor: pointer;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .box {
+            width: 40%; /* 2列にするために幅を設定 */
+            margin: 10px; /* 画像の間隔を設定 */
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="icon.png" alt="Home"></a>
+    </header>
+
+    <nav>
+        <a href="darksouls3.html">DARK SOULS 3</a>
+        <a href="image_index.html">画像</a>
+        <!-- 追加のページへのリンクをここに追加 -->
+    </nav>
+
+    <main>
+        <h1>Welcome to My Website</h1>
+        <img src="first_image.jpg" alt="First Image">
+        <p>Click the image to go to another page.</p>
+    </main>
+
+    <div class="container">
+        <div class="box" onclick="window.location.href='fate.html'">
+            <img src="icon_fate.png" alt="kusozako❤wifi">
+        </div>
+        <div class="box" onclick="window.location.href='another_page.html'">
+            <img src="icon_another.png" alt="kusozako❤wifi">
+        </div>
+				<div class="box" onclick="window.location.href='another_page.html'">
+            <img src="icon_another.png" alt="kusozako❤wifi">
+        </div>
+        <!-- 必要な分だけ繰り返して追加 -->
+    </div>
+
+    <footer>
+        <a href="#" onclick="history.back()">Back</a>
+        <a href="index2.html">Home</a>
+    </footer>
+
+</body>
+</html>

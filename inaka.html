@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+		<style>
+		#image-container img {
+				width: 100%;
+				height: auto;
+		}
+		</style>
+</head>
+<body>
+		<h1>田舎にはこれくらいしか娯楽がない</h1>
+		<h2>陸の孤島亭</h2>
+    <div id="image-container"></div>
+
+    <script>
+        const imageContainer = document.getElementById("image-container");
+
+        // 画像のフォルダとファイル名のプレフィックス
+        let folderPath, fileNamePrefix, startNumber, endNumber;
+
+        // 田舎1の画像を追加
+        folderPath = "陸の孤島/田舎1/";
+        fileNamePrefix = "ファイル_";
+        startNumber = 0;
+        endNumber = 32;
+        addImages(imageContainer, folderPath, fileNamePrefix, startNumber, endNumber);
+
+        // 田舎2の画像を追加
+        folderPath = "陸の孤島/田舎2/";
+        fileNamePrefix = "ファイル_";
+        startNumber = 0;
+        endNumber = 46;
+        addImages(imageContainer, folderPath, fileNamePrefix, startNumber, endNumber);
+
+        // 田舎3の画像を追加
+        folderPath = "陸の孤島/田舎3/";
+        fileNamePrefix = "ファイル_";
+        startNumber = 0;
+        endNumber = 55;
+        addImages(imageContainer, folderPath, fileNamePrefix, startNumber, endNumber);
+
+        // 田舎4の画像を追加
+        folderPath = "陸の孤島/田舎4/";
+        fileNamePrefix = "ファイル_";
+        startNumber = 0;
+        endNumber = 53;
+        addImages(imageContainer, folderPath, fileNamePrefix, startNumber, endNumber);
+
+        // 画像を追加する関数
+        function addImages(container, folderPath, fileNamePrefix, startNumber, endNumber) {
+            for (let i = startNumber; i <= endNumber; i++) {
+                const img = document.createElement("img");
+                img.src = folderPath + fileNamePrefix + pad(i, 3) + ".png";
+                img.alt = "Image " + (i + 1);
+                container.appendChild(img);
+            }
+        }
+
+        // ゼロパディング関数
+        function pad(number, length) {
+            let str = String(number);
+            while (str.length < length) {
+                str = "0" + str;
+            }
+            return str;
+        }
+    </script>
+</body>
+</html>

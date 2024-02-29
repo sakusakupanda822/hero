@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沖田総司</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            height: 40px;
+            width: 100px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+				.container {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						align-items: flex-start;
+				}
+				.box {
+						width: 40%; /* 2列にするために幅を設定 */
+						margin: 10px; /* 画像の間隔を設定 */
+				}
+				.box img {
+						width: 250px;
+						height: auto;
+						display: block;
+				}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index2.html"><img src="icon.png" alt="Home"></a>
+    </header>
+
+		<div class="container">
+    <div class="box" onclick="window.location.href='eulam.html'">
+        <img src="エウルア/エウルア/IMG_6030.JPG" alt="eula">
+    </div>
+    <div class="box" onclick="window.location.href='eutabi.html'">
+        <img src="エウルア/エウルア＋旅人/000.webp" alt="eutabi">
+    </div>
+    <!-- 必要な分だけ繰り返して追加 -->
+		</div>
+
+
+
+    <footer>
+        <a href="#" onclick="history.back()">Back</a>
+        <a href="index2.html">Home</a>
+    </footer>
+</body>
+</html>
